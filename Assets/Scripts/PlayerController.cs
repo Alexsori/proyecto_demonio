@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     public Transform groundcheck;
     public bool isGrounded;
     public float groundCheckRadius;
-    public LayerMask whatIsGround;  
+    public LayerMask whatIsGround;
+    Animator anim;
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,6 +54,15 @@ public class PlayerController : MonoBehaviour
         velY = rb.velocity.y;
 
         rb.velocity = new Vector2(velX * speed, velY);
+
+        if(rb.velocity.x != 0)
+        {
+            anim.SetBool("Run", true);
+        }
+        else
+        {
+            anim.SetBool("Run", false);
+        }
     }
 
     public void flipCharacter()
