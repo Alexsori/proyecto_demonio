@@ -23,6 +23,17 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundcheck.position, groundCheckRadius, whatIsGround);
 
+        if(isGrounded)
+        {
+            anim.SetBool("Jump", false);
+        }
+        else
+        {
+            anim.SetBool("Jump", false);
+        }
+
+
+
         flipCharacter();
 
 
