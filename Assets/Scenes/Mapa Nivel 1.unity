@@ -9431,7 +9431,7 @@ Transform:
   m_Children:
   - {fileID: 1773287179}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1773287178
 GameObject:
@@ -9481,7 +9481,7 @@ Animator:
   m_GameObject: {fileID: 1773287178}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a287b440445e914281712fec38aec60, type: 2}
+  m_Controller: {fileID: 9100000, guid: be62a18154f3dfd47bd43271bbb4f2fb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9556,6 +9556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6908090661ec545a19172de7b9167f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDamaged: 0
+  deathEffect: {fileID: 0}
 --- !u!114 &1773287183
 MonoBehaviour:
   m_ObjectHideFlags: 0
