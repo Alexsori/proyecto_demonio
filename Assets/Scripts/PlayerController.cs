@@ -35,13 +35,26 @@ public class PlayerController : MonoBehaviour
 
 
         flipCharacter();
-
+        Attack();
 
     }
     private void FixedUpdate()
     {
         Movement();
         Jump();
+    }
+
+    public void Attack()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            anim.SetBool("Attack1", true);
+
+        }
+        else
+        {
+            anim.SetBool("Attack1", false);
+        }
     }
 
     public void Jump()
