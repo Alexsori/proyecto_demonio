@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            anim.SetBool("Jump", false);
+            anim.SetBool("Jump", true);
         }
 
 
@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
+        Jump();
     }
 
     public void Jump()
@@ -80,11 +81,11 @@ public class PlayerController : MonoBehaviour
     {
         if (rb.velocity.x > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(2.54779f, 2.402077f, 0);
         }
         else
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-2.54779f, 2.402077f, 0);
         }
     }
 }
