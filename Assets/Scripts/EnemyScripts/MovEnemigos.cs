@@ -11,6 +11,9 @@ public class MovEnemigos : MonoBehaviour
     public bool isStatic;
     public bool isWalker;
     public bool isPatrol;
+    public bool shouldWait;
+    public float timeToWait;
+    public bool isWaiting;
     public bool walksRight;
 
     public Transform wallCheck, pitCheck, groudCheck;
@@ -69,13 +72,24 @@ public class MovEnemigos : MonoBehaviour
         }
         if (isPatrol)
         {
-            anim.SetBool("idle", false);
+            
             if (goToA)
             {
-                rb.velocity = new Vector2(-speed * Time.deltaTime, rb.velocity.y);
-
-                if(Vector2.Distance(transform.position, pointA.position) < 0.2f)
+                if (!isWaiting)
                 {
+                     anim.SetBool("idle", false);
+                     rb.velocity = new Vector2(-speed * Time.deltaTime, rb.velocity.y);
+                }
+
+               
+                if (Vector2.Distance(transform.position, pointA.position) < 0.2f)
+                {
+                    if (shouldWait)
+                    {
+                        StartCoroutine(Waiting());
+                    }
+
+                    Flip();
                     goToA = false;
                     goToB = true;
                 }
@@ -83,11 +97,39 @@ public class MovEnemigos : MonoBehaviour
 
             if (goToB)
             {
-                rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
 
+                if (!isWaiting)
+                {
+                    anim.SetBool("idle", false);
+                    rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+                }
+                
+                if (Vector2.Distance(transform.position, pointB.position) < 0.2f)
+                {
+                    if (shouldWait)
+                    {
+                        StartCoroutine(Waiting());
+                    }
+
+                    Flip();
+                    goToA = true;
+                    goToB = false;
+                }
             }
         }
     }
+
+    IEnumerator Waiting()
+    {
+        anim.SetBool("Idel", true);
+        isWaiting = true;
+        Flip();
+        yield return new WaitForSeconds(timeToWait);
+        isWaiting = false;
+        anim.SetBool("Idle", false);
+        Flip();
+    }
+
     public void Flip()
     {
         walksRight = !walksRight;
