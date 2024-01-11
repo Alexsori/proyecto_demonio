@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 138
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481bbd8850b98d54b9d5136ae4461e28
+      internalID: 1749169632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 137
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f031111bb03f14f8fec8633e6981eb
+      internalID: -390831141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 139
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8eba29c7bad30488563af2c6a9a081
+      internalID: -1849043843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 139
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24cf664d8e63b94ab097f3c5580bfbd
+      internalID: 236453584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 101
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f23fbe77a95da4f98b8849cdf74157
+      internalID: -73481240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 102
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcd497fba9444c429e37b586dc7c936
+      internalID: 958642327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 100
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75ee09174b7c7b4e841f4e61b8d3f29
+      internalID: 804594707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 97
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6ed4dacd11d2e4687be01323ac39a2
+      internalID: 648254234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 100
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6adb933a88e2034c918bd3186c08b6f
+      internalID: -2106576340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat_Sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 102
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc1ea19c49f0144da60093a846abb5a
+      internalID: 650959766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +342,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bat_Sprite_sheet_0: 1749169632
+      Bat_Sprite_sheet_1: -390831141
+      Bat_Sprite_sheet_2: -1849043843
+      Bat_Sprite_sheet_3: 236453584
+      Bat_Sprite_sheet_4: -73481240
+      Bat_Sprite_sheet_5: 958642327
+      Bat_Sprite_sheet_6: 804594707
+      Bat_Sprite_sheet_7: 648254234
+      Bat_Sprite_sheet_8: -2106576340
+      Bat_Sprite_sheet_9: 650959766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
