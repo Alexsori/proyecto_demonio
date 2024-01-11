@@ -3318,8 +3318,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.43, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.010000229, y: 0.4300003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4971,14 +4971,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929720651}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.1187, y: -2.5, z: 0}
   m_LocalScale: {x: 2.5477898, y: 2.4020767, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1460438999}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &929720655
 CapsuleCollider2D:
@@ -5027,8 +5027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fee8b781d380634ea59c521f2807a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  jumpHeight: 8
+  speed: 4
+  jumpHeight: 9
   groundcheck: {fileID: 1460438999}
   isGrounded: 0
   groundCheckRadius: 0.2
@@ -7478,7 +7478,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18.9, y: 5.8}
+  m_Size: {x: 18.75, y: 5.8}
   m_EdgeRadius: 0
 --- !u!4 &1405935145 stripped
 Transform:
@@ -10180,7 +10180,7 @@ Transform:
   - {fileID: 445813616}
   - {fileID: 110363861}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1873649761
 GameObject:
@@ -11063,7 +11063,7 @@ Transform:
   - {fileID: 819677717}
   - {fileID: 1877719731}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987221463
 GameObject:
@@ -11417,7 +11417,7 @@ Transform:
   - {fileID: 315717482}
   - {fileID: 483821176}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2061576356 stripped
 Transform:
