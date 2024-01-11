@@ -48,13 +48,10 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            anim.SetBool("Attack1", true);
+            anim.SetTrigger("Attack1");
 
         }
-        else
-        {
-            anim.SetBool("Attack1", false);
-        }
+        
     }
 
     public void Jump()
