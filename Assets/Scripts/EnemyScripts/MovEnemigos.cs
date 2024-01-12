@@ -63,11 +63,11 @@ public class MovEnemigos : MonoBehaviour
 
             if (!walksRight)
             {
-                rb.velocity = new Vector2(-speed * Time.deltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
             }
             else
             {
-                rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+                rb.velocity = new Vector2(speed, rb.velocity.y);
             }
         }
         if (isPatrol)
@@ -78,11 +78,11 @@ public class MovEnemigos : MonoBehaviour
                 if (!isWaiting)
                 {
                      anim.SetBool("idle", false);
-                     rb.velocity = new Vector2(-speed * Time.deltaTime, rb.velocity.y);
+                     rb.velocity = new Vector2(-speed, rb.velocity.y);
                 }
 
                
-                if (Vector2.Distance(transform.position, pointA.position) < 0.2f)
+                if (Vector2.Distance(transform.position, pointA.position) < 2f)
                 {
                     if (shouldWait)
                     {
@@ -101,10 +101,10 @@ public class MovEnemigos : MonoBehaviour
                 if (!isWaiting)
                 {
                     anim.SetBool("idle", false);
-                    rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+                    rb.velocity = new Vector2(speed, rb.velocity.y);
                 }
                 
-                if (Vector2.Distance(transform.position, pointB.position) < 0.2f)
+                if (Vector2.Distance(transform.position, pointB.position) < 2f)
                 {
                     if (shouldWait)
                     {
@@ -121,18 +121,19 @@ public class MovEnemigos : MonoBehaviour
 
     IEnumerator Waiting()
     {
-        anim.SetBool("Idel", true);
+        anim.SetBool("idle", true);
         isWaiting = true;
         Flip();
         yield return new WaitForSeconds(timeToWait);
         isWaiting = false;
-        anim.SetBool("Idle", false);
+        anim.SetBool("idle", false);
         Flip();
     }
 
     public void Flip()
     {
-        walksRight = !walksRight;
-        transform.localScale = new Vector2(-1, transform.localScale.y);
+        //SpriteRenderer.Flip.x
+        //walksRight = !walksRight;
+        //transform.localScale = new Vector2(-4, transform.localScale.y);
     }
 }
