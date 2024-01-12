@@ -33,8 +33,11 @@ public class VidaEnemigo : MonoBehaviour
     IEnumerator Damager()
     {
         isDamaged = true;
+        GetComponent<SpriteRenderer>().material = GetComponent<Blink>().blink;
         yield return new WaitForSeconds(0.5f);
         isDamaged = false;
+        GetComponent<SpriteRenderer>().material = GetComponent<Blink>().blink;
+
     }
 
 

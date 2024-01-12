@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Blink : MonoBehaviour
 {
+    internal Material blink;
+
     // Start is called before the first frame update
     void Start()
     {
