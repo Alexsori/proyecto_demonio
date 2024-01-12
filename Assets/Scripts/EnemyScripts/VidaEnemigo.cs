@@ -9,9 +9,15 @@ public class VidaEnemigo : MonoBehaviour
     Enemigo enemy;
     public bool isDamaged;
     public GameObject deathEffect;
+    SpriteRenderer sprite; 
+    Blink material;
+    Rigidbody2D rb;
 
     private void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        material = GetComponent<Blink>();
         enemy = GetComponent<Enemigo>();
     }
 
@@ -20,6 +26,15 @@ public class VidaEnemigo : MonoBehaviour
         if (collision.CompareTag("Weapon") && !isDamaged)
         {
             enemy.healthPoints -= 2f;
+            if(collision.transform.position.x < transform.position.x)
+            {
+                rb.AddForce(new Vector2(enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(-enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
+            }
+
             StartCoroutine(Damager());
             
             if(enemy.healthPoints <= 0)
@@ -33,10 +48,10 @@ public class VidaEnemigo : MonoBehaviour
     IEnumerator Damager()
     {
         isDamaged = true;
-        GetComponent<SpriteRenderer>().material = GetComponent<Blink>().blink;
+        sprite.material = material.blink;
         yield return new WaitForSeconds(0.5f);
         isDamaged = false;
-        GetComponent<SpriteRenderer>().material = GetComponent<Blink>().blink;
+        sprite.material = material.blink;
 
     }
 
