@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class blink : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Material original;
+    public Material Blink;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

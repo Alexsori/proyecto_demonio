@@ -16,7 +16,7 @@ public class MovEnemigos : MonoBehaviour
     public bool isWaiting;
     public bool walksRight;
 
-    public Transform wallCheck, pitCheck, groudCheck;
+    public Transform wallCheck, pitCheck, groundCheck;
     public bool wallDetected, pitDetected, isGrounded;
     public float detectionRadius;
     public LayerMask whatIsGround;
@@ -39,7 +39,7 @@ public class MovEnemigos : MonoBehaviour
     {
         pitDetected = !Physics2D.OverlapCircle(pitCheck.position, detectionRadius, whatIsGround);
         wallDetected = Physics2D.OverlapCircle(wallCheck.position, detectionRadius, whatIsGround);
-        isGrounded = Physics2D.OverlapCircle(groudCheck.position, detectionRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, detectionRadius, whatIsGround);
 
 
         if (pitDetected || wallDetected && isGrounded)
