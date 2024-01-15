@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GridBrushBase;
 
 public class MovEnemigos : MonoBehaviour
 {
     float speed;
     Rigidbody2D rb;
     Animator anim;
-        
+
     public bool isStatic;
     public bool isWalker;
     public bool isPatrol;
@@ -23,6 +24,7 @@ public class MovEnemigos : MonoBehaviour
 
     public Transform pointA, pointB;
     public bool goToA, goToB;
+    private object spriteRenderer;
 
 
     // Start is called before the first frame update
@@ -47,7 +49,7 @@ public class MovEnemigos : MonoBehaviour
             Flip();
         }
     }
-    
+
 
     private void FixedUpdate()
     {
@@ -72,16 +74,16 @@ public class MovEnemigos : MonoBehaviour
         }
         if (isPatrol)
         {
-            
+
             if (goToA)
             {
                 if (!isWaiting)
                 {
-                     anim.SetBool("idle", false);
-                     rb.velocity = new Vector2(-speed, rb.velocity.y);
+                    anim.SetBool("idle", false);
+                    rb.velocity = new Vector2(-speed, rb.velocity.y);
                 }
 
-               
+
                 if (Vector2.Distance(transform.position, pointA.position) < 2f)
                 {
                     if (shouldWait)
@@ -103,7 +105,7 @@ public class MovEnemigos : MonoBehaviour
                     anim.SetBool("idle", false);
                     rb.velocity = new Vector2(speed, rb.velocity.y);
                 }
-                
+
                 if (Vector2.Distance(transform.position, pointB.position) < 2f)
                 {
                     if (shouldWait)
@@ -129,11 +131,16 @@ public class MovEnemigos : MonoBehaviour
         anim.SetBool("idle", false);
         Flip();
     }
-
-    public void Flip()
-    {
+     public void Flip()
+     {
         //SpriteRenderer.Flip.x
-        //walksRight = !walksRight;
-        //transform.localScale = new Vector2(-4, transform.localScale.y);
-    }
+         walksRight = !walksRight;
+         transform.localScale = new Vector2(-4, transform.localScale.y);
+     }
+
+   
 }
+
+   
+
+
