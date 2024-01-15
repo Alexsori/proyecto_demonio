@@ -19,45 +19,70 @@ public class VidaEnemigo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         material = GetComponent<Blink>();
         enemy = GetComponent<Enemigo>();
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Weapon") && !isDamaged)
         {
+            // Reducir la salud del enemigo
             enemy.healthPoints -= 2f;
-            if (collision.transform.position.x < transform.position.x)
-            {
-                rb.AddForce(new Vector2(enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
-            }
-            else
-            {
-                rb.AddForce(new Vector2(-enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
-            }
 
-            StartCoroutine(Damager());
+            // Aplicar efecto de golpe y knockback
+            ApplyHitEffect(collision);
 
-            Debug.Log("Salud del enemigo: " + enemy.healthPoints);
+            // Iniciar la corrutina para el destello blanco
+            StartCoroutine(FlashWhite());
 
+            // Verificar si el enemigo debe ser destruido
             if (enemy.healthPoints <= 0)
             {
-                Debug.Log("Enemigo destruido");
                 Destroy(gameObject);
             }
         }
     }
 
+    void ApplyHitEffect(Collider2D collision)
+    {
+        // Aplicar knockback
+        if (collision.transform.position.x < transform.position.x)
+        {
+            rb.AddForce(new Vector2(enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
+        }
+        else
+        {
+            rb.AddForce(new Vector2(-enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
+        }
+
+        // Iniciar la corrutina para el parpadeo de daño
+        StartCoroutine(FlashWhite());
+    }
+
     IEnumerator Damager()
     {
         isDamaged = true;
-        Material originalMaterial = sprite.material;
         sprite.material = material.blink;
-
         yield return new WaitForSeconds(0.5f);
-
         isDamaged = false;
-        sprite.material = originalMaterial;
+        sprite.material = material.blink;
     }
 
+    IEnumerator FlashWhite()
+    {
+        isDamaged = true;
+        sprite.color = Color.white;
+        yield return new WaitForSeconds(0.5f);
+        isDamaged = false;
+        sprite.color = Color.white;
+    }
+
+    void ActivateDeathAnimation()
+    {
+        // Activa la animación mediante el Animator
+        Animator animator = deathEffect.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetTrigger("DestroyTrigger");
+        }
+    }
 }
