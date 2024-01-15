@@ -6691,9 +6691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42f6b19e0ecb044abeb619c400f47be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
-  healthImg: {fileID: 50616255}
+  health: 100
+  maxHealth: 100
+  healthImg: {fileID: 1536436629}
   inmunityTime: 1
   knockbackForceX: 2
   knockbackForceY: 2
@@ -13336,7 +13336,7 @@ MonoBehaviour:
   speed: 3
   knockbackForceX: 0
   knockbackForceY: 0
-  damageToGive: 0
+  damageToGive: 20
 --- !u!61 &1773287184
 BoxCollider2D:
   m_ObjectHideFlags: 0

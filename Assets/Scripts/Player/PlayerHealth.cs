@@ -15,11 +15,13 @@ public class PlayerHealth : MonoBehaviour
     SpriteRenderer sprite;
     public float knockbackForceX;
     public float knockbackForceY;
+    Animator anim;
     //Rigidbody2D rb;
+
   
     void Start()
     {
-        //rb = GetComponent<SpriteRenderer>();
+       // rb = GetComponent<SpriteRenderer>();
         sprite = GetComponent<SpriteRenderer>();
         material = GetComponent<Blink>();
         health = maxHealth;
@@ -35,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
         {
             health = maxHealth;
         }
+
+    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,10 +57,20 @@ public class PlayerHealth : MonoBehaviour
 
             if(health <=0)
             {
+
+               
                 print("player dead");
+
+                //anim.SetTrigger("Death");
             }
+
+            
+
         }
     }
+
+ 
+
 
     IEnumerator Inmunity()
     {
