@@ -1,31 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
 
     public float health;
     public float maxHealth;
+    public Image healthImg;
     bool isInmune;
     public float inmunityTime;
     Blink material;
     SpriteRenderer sprite;
-    // Start is called before the first frame update
+    public float knockbackForceX;
+    public float knockbackForceY;
+    Animator anim;
+    //Rigidbody2D rb;
+
+  
     void Start()
     {
+       // rb = GetComponent<SpriteRenderer>();
         sprite = GetComponent<SpriteRenderer>();
         material = GetComponent<Blink>();
         health = maxHealth;
     }
 
     // Update is called once per frame
-    void Update()
+   private void Update()
     {
+        healthImg.fillAmount = health / 100;
+
+
         if(health> maxHealth)
         {
             health = maxHealth;
         }
+
+    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,13 +46,31 @@ public class PlayerHealth : MonoBehaviour
         if(collision.CompareTag("Enemigo") && !isInmune)
         {
             health -= collision.GetComponent<Enemigo>().damageToGive;
+           
+            //rb.AddForce(new Vector2 (Enemigo.knockbackForceX, Enemigo.knockbackForceY), ForceMode2D.Force);
+            
+            
             StartCoroutine(Inmunity());
+
+           
+
+
             if(health <=0)
             {
+
+               
                 print("player dead");
+
+                //anim.SetTrigger("Death");
             }
+
+            
+
         }
     }
+
+ 
+
 
     IEnumerator Inmunity()
     {
