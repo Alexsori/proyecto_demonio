@@ -9,7 +9,7 @@ public class VidaEnemigo : MonoBehaviour
     Enemigo enemy;
     public bool isDamaged;
     public GameObject deathEffect;
-    SpriteRenderer sprite; 
+    SpriteRenderer sprite;
     Blink material;
     Rigidbody2D rb;
 
@@ -26,7 +26,7 @@ public class VidaEnemigo : MonoBehaviour
         if (collision.CompareTag("Weapon") && !isDamaged)
         {
             enemy.healthPoints -= 2f;
-            if(collision.transform.position.x < transform.position.x)
+            if (collision.transform.position.x < transform.position.x)
             {
                 rb.AddForce(new Vector2(enemy.knockbackForceX, enemy.knockbackForceY), ForceMode2D.Force);
             }
@@ -36,10 +36,10 @@ public class VidaEnemigo : MonoBehaviour
             }
 
             StartCoroutine(Damager());
-            
-            if(enemy.healthPoints <= 0)
+
+            if (enemy.healthPoints <= 0)
             {
-                Instantiate(deathEffect, transform.position, Quaternion.identity);
+                Destroy(deathEffect);
                 Destroy(gameObject);
             }
         }
@@ -52,8 +52,6 @@ public class VidaEnemigo : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         isDamaged = false;
         sprite.material = material.blink;
-
     }
-
 
 }
