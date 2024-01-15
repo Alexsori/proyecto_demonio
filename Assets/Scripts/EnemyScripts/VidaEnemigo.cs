@@ -19,6 +19,7 @@ public class VidaEnemigo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         material = GetComponent<Blink>();
         enemy = GetComponent<Enemigo>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,9 +38,11 @@ public class VidaEnemigo : MonoBehaviour
 
             StartCoroutine(Damager());
 
+            Debug.Log("Salud del enemigo: " + enemy.healthPoints);
+
             if (enemy.healthPoints <= 0)
             {
-                Destroy(deathEffect);
+                Debug.Log("Enemigo destruido");
                 Destroy(gameObject);
             }
         }
@@ -48,10 +51,13 @@ public class VidaEnemigo : MonoBehaviour
     IEnumerator Damager()
     {
         isDamaged = true;
+        Material originalMaterial = sprite.material;
         sprite.material = material.blink;
+
         yield return new WaitForSeconds(0.5f);
+
         isDamaged = false;
-        sprite.material = material.blink;
+        sprite.material = originalMaterial;
     }
 
 }
