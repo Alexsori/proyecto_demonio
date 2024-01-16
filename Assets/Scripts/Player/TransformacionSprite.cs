@@ -7,7 +7,7 @@ public class TransformacionSprite : MonoBehaviour
 {
     public RuntimeAnimatorController animatorControllerInicial;
     public RuntimeAnimatorController animatorControllerNuevo;
-    public float duracionTransformacion = 2f;
+    public float duracionTransformacion = 5f;
     private SpriteRenderer spriteRenderer;
     private Sprite spriteOriginal;
     private bool enTransformacion = false;
