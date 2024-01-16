@@ -24,7 +24,7 @@ public class MovEnemigos : MonoBehaviour
 
     public Transform pointA, pointB;
     public bool goToA, goToB;
-    private object spriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
 
     // Start is called before the first frame update
@@ -34,6 +34,9 @@ public class MovEnemigos : MonoBehaviour
         speed = GetComponent<Enemigo>().speed;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -46,7 +49,7 @@ public class MovEnemigos : MonoBehaviour
 
         if (pitDetected || wallDetected && isGrounded)
         {
-            Flip();
+           // Flip();
         }
     }
 
@@ -91,7 +94,7 @@ public class MovEnemigos : MonoBehaviour
                         StartCoroutine(Waiting());
                     }
 
-                    Flip();
+                    //Flip();
                     goToA = false;
                     goToB = true;
                 }
@@ -113,7 +116,7 @@ public class MovEnemigos : MonoBehaviour
                         StartCoroutine(Waiting());
                     }
 
-                    Flip();
+                   // Flip();
                     goToA = true;
                     goToB = false;
                 }
@@ -125,20 +128,18 @@ public class MovEnemigos : MonoBehaviour
     {
         anim.SetBool("idle", true);
         isWaiting = true;
-        Flip();
+       // Flip();
         yield return new WaitForSeconds(timeToWait);
         isWaiting = false;
         anim.SetBool("idle", false);
-        Flip();
+       // Flip();
     }
-     public void Flip()
-     {
-        //SpriteRenderer.Flip.x
-         walksRight = !walksRight;
-         transform.localScale = new Vector2(-4, transform.localScale.y);
-     }
-
-   
+    public void Flip()
+    {
+       // SpriteRenderer.FlipX = true;
+       // walksRight = !walksRight;
+        //transform.localScale = new Vector2(-4, transform.localScale.x);
+    }
 }
 
    

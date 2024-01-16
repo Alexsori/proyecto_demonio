@@ -6169,9 +6169,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42f6b19e0ecb044abeb619c400f47be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
+  health: 100
+  maxHealth: 100
+  healthImg: {fileID: 0}
   inmunityTime: 0
+  knockbackForceX: 0
+  knockbackForceY: 0
 --- !u!1001 &949650602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12416,7 +12419,7 @@ MonoBehaviour:
   enemyName: Esqueleto
   healthPoints: 30
   speed: 3
-  knockbackForceX: 10
+  knockbackForceX: 30
   knockbackForceY: 30
   damageToGive: 0
 --- !u!61 &1773287184
