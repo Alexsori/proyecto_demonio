@@ -403,7 +403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88.65588, y: -53.794785}
+  m_AnchoredPosition: {x: 88.65588, y: 0}
   m_SizeDelta: {x: 158.025, y: 12.1702}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &35919431
@@ -479,7 +479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 36.3, y: -27.9}
+  m_AnchoredPosition: {x: 36.3, y: 0}
   m_SizeDelta: {x: 217.0554, y: 63.5226}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &40942000
@@ -1379,7 +1379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906375577854369276, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_Size.y
-      value: 25.237421
+      value: 24.65995
       objectReference: {fileID: 0}
     - target: {fileID: 6906375577854369276, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_DrawMode
@@ -1399,7 +1399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236086876163921089, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.643944
+      value: 13.9327
       objectReference: {fileID: 0}
     - target: {fileID: 7236086876163921089, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2130,7 +2130,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 3}
-    newSize: {x: 7.61389, y: 1.3845851}
+    newSize: {x: 7.61389, y: 0.49191687}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -2378,7 +2378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906375577854369276, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_Size.y
-      value: 1.3845851
+      value: 0.49191687
       objectReference: {fileID: 0}
     - target: {fileID: 6906375577854369276, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_DrawMode
@@ -2406,7 +2406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236086876163921089, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.627243
+      value: 16.0286
       objectReference: {fileID: 0}
     - target: {fileID: 7236086876163921089, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3437,7 +3437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88.65588, y: -34.207382}
+  m_AnchoredPosition: {x: 88.65588, y: 0}
   m_SizeDelta: {x: 158.026, y: 17.3181}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &429497896
@@ -3513,7 +3513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.536377, y: -34.207382}
+  m_AnchoredPosition: {x: 42.536377, y: 0}
   m_SizeDelta: {x: 43.3716, y: 50.9078}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &431297470
@@ -3813,7 +3813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6906375577854369276, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_Size.y
-      value: 43.892418
+      value: 43.178123
       objectReference: {fileID: 0}
     - target: {fileID: 6906375577854369276, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_DrawMode
@@ -3841,7 +3841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236086876163921089, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.758844
+      value: 21.08
       objectReference: {fileID: 0}
     - target: {fileID: 7236086876163921089, guid: 7779a9b8c79e63043ab9d226c102c4ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8359,7 +8359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88.65799, y: -68.44577}
+  m_AnchoredPosition: {x: 88.65799, y: 0}
   m_SizeDelta: {x: 158.025, y: 8.7381}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1017442133
@@ -11509,7 +11509,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 3}
-    newSize: {x: 22.29927, y: 25.237421}
+    newSize: {x: 22.29927, y: 24.65995}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -18582,7 +18582,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3, y: 3}
-    newSize: {x: 1.274977, y: 43.892418}
+    newSize: {x: 1.274977, y: 43.178123}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
