@@ -32,26 +32,15 @@ public class TransformacionSprite : MonoBehaviour
     {
         enTransformacion = true;
 
-        // Cambia al Animator Controller nuevo
+
         Animator animator = GetComponent<Animator>();
         animator.runtimeAnimatorController = animatorControllerNuevo;
-
         spriteRenderer.flipX = true;
-
-        // Espera la duración de la transformación
         yield return new WaitForSeconds(duracionTransformacion);
-        
-        // Cambia de nuevo al Animator Controller inicial
-        animator.runtimeAnimatorController = animatorControllerInicial;
-        
+        animator.runtimeAnimatorController = animatorControllerInicial; 
         spriteRenderer.flipX = false;
-        
-        // Espera un tiempo antes de restablecer el sprite
         yield return new WaitForSeconds(2f);
-
-        // Restablece el sprite original
         spriteRenderer.sprite = spriteOriginal;
-
         enTransformacion = false;
     }
 }
