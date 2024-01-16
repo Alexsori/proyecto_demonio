@@ -6500,6 +6500,7 @@ GameObject:
   - component: {fileID: 929720655}
   - component: {fileID: 929720657}
   - component: {fileID: 929720658}
+  - component: {fileID: 929720659}
   m_Layer: 6
   m_Name: Personaje
   m_TagString: Untagged
@@ -6697,6 +6698,21 @@ MonoBehaviour:
   inmunityTime: 1
   knockbackForceX: 2
   knockbackForceY: 2
+--- !u!114 &929720659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929720651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3bbf0ef1a3cba64aaea759ec3b69ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorControllerInicial: {fileID: 9100000, guid: 8d72ac2ce18754144b1dbe6487371836, type: 2}
+  animatorControllerNuevo: {fileID: 9100000, guid: b3a8d1d9929c97f419f35273f9adb37c, type: 2}
+  duracionTransformacion: 5
 --- !u!1 &933984784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7275692835808633599, guid: 1af5406a915c95543bae76ce37b6ac86, type: 3}
