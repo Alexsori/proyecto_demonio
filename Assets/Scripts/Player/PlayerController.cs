@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     Animator anim;
+    public GameObject Weapon;
+    public float tiempoDeActivacion = 1f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,12 +48,15 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        if(Input.GetButtonDown("Fire1"))
+ 
+
+        if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("Attack1");
 
         }
-        
+
+
     }
 
     public void Jump()
@@ -98,4 +103,5 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-2.54779f, 2.402077f, 0);
         }
     }
+
 }

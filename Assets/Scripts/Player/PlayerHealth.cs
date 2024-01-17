@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static Corazon;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public float health;
     public float maxHealth;
     public Image healthImg;
@@ -16,70 +17,60 @@ public class PlayerHealth : MonoBehaviour
     public float knockbackForceX;
     public float knockbackForceY;
     Animator anim;
-    //Rigidbody2D rb;
-    //PruebaCambio
-  
+    public TextMeshProUGUI mensajeTexto;
+
     void Start()
     {
-       // rb = GetComponent<SpriteRenderer>();
         sprite = GetComponent<SpriteRenderer>();
         material = GetComponent<Blink>();
         health = maxHealth;
     }
 
-    // Update is called once per frame
-   private void Update()
+    private void Update()
     {
-        healthImg.fillAmount = health / 100;
+        healthImg.fillAmount = health / maxHealth;
 
-
-        if(health> maxHealth)
+        if (health > maxHealth)
         {
             health = maxHealth;
         }
-
-    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemigo") && !isInmune)
+        if (collision.CompareTag("Enemigo") && !isInmune)
         {
             health -= collision.GetComponent<Enemigo>().damageToGive;
-           
-            //rb.AddForce(new Vector2 (Enemigo.knockbackForceX, Enemigo.knockbackForceY), ForceMode2D.Force);
-            
-            
+
             StartCoroutine(Inmunity());
 
-           
-
-
-            if(health <=0)
+            if (health <= 0)
             {
-
-               
                 print("player dead");
-
                 //anim.SetTrigger("Death");
             }
+        }
+        else if (collision.CompareTag("Heart"))
+        {
+            // Aumenta la vida máxima del jugador
+            AumentarVidaMaxima(collision.GetComponent<Corazon>().vidaAumentada);
 
-            
-
+            // Destruye el corazón
+            Destroy(collision.gameObject);
         }
     }
 
- 
-
-
     IEnumerator Inmunity()
     {
-
         isInmune = true;
-        //sprite.material = material.blink;
-        yield return new WaitForSeconds(0.5f);
-        //sprite.material = material.original;
+        yield return new WaitForSeconds(inmunityTime);
         isInmune = false;
     }
 
+    public void AumentarVidaMaxima(int cantidad)
+    {
+        maxHealth += cantidad;
+        health = maxHealth; // También puedes ajustar la salud actual si lo prefieres.
+        Debug.Log("Vida máxima aumentada a: " + maxHealth);
+    }
 }
