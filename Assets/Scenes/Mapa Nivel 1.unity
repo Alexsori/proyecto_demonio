@@ -6395,6 +6395,8 @@ MonoBehaviour:
     m_Bits: 128
   Weapon: {fileID: 420586607}
   tiempoDeActivacion: 1
+  salto: {fileID: 8300000, guid: 1a318c2fd7d9afd4fb51ba5f44298187, type: 3}
+  Golpe: {fileID: 8300000, guid: 08ef0938068abd44289ca2c481d30c29, type: 3}
 --- !u!50 &929720657
 Rigidbody2D:
   serializedVersion: 4
@@ -6501,6 +6503,8 @@ MonoBehaviour:
   animatorControllerInicial: {fileID: 9100000, guid: 8d72ac2ce18754144b1dbe6487371836, type: 2}
   animatorControllerNuevo: {fileID: 9100000, guid: b3a8d1d9929c97f419f35273f9adb37c, type: 2}
   duracionTransformacion: 8
+  nuevaVelocidadLobo: 7
+  antiguaVelocidad: 1
 --- !u!114 &929720661
 MonoBehaviour:
   m_ObjectHideFlags: 0
