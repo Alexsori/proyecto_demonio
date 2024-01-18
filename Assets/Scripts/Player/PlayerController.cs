@@ -16,8 +16,10 @@ public class PlayerController : MonoBehaviour
     public float tiempoDeActivacion = 1f;
     public AudioSource audioSource;
     public AudioClip Golpe;
-    public AudioClip Salto;
-    private bool isAttacking = false;
+    public AudioClip Footsteps;
+    public AudioClip salto;
+    bool isAttacking = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -52,33 +54,40 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
- 
-
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !isAttacking)
         {
-            isAttacking = true;
-            anim.SetTrigger("Attack1");
-
+            StartCoroutine(AttackCoroutine());
         }
-
-
     }
+
+    IEnumerator AttackCoroutine()
+    {
+        isAttacking = true;
+
+        anim.SetTrigger("Attack1");
+
+        AudioSource.PlayClipAtPoint(Golpe, transform.position);
+
+
+        yield return new WaitForSeconds(0.5f);
+
+        isAttacking = false;
+    }
+
 
     public void Jump()
     {
         if (Input.GetButton("Jump") && isGrounded)
         {
-            audioSource.PlayOneShot(Salto);
+            if (audioSource != null && Footsteps != null && audioSource.clip == Footsteps && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+
+            AudioSource.PlayClipAtPoint(salto, transform.position);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-        }    
-
-        
+        }
     }
-
-    
-        
-    
-
 
 
     public void Movement()
@@ -88,13 +97,24 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(velX * speed, velY);
 
-        if(rb.velocity.x != 0)
+        if (Mathf.Abs(rb.velocity.x) > 0 && isGrounded)
         {
             anim.SetBool("Run", true);
+
+            if (audioSource != null && Footsteps != null && !audioSource.isPlaying)
+            {
+                audioSource.clip = Footsteps;
+                audioSource.Play();
+            }
         }
         else
         {
             anim.SetBool("Run", false);
+
+            if (audioSource != null && Footsteps != null && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
     }
 

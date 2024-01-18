@@ -13,16 +13,16 @@ public class TransformacionSprite : MonoBehaviour
     private bool enTransformacion = false;
     public float nuevaVelocidadLobo = 7f;
     public float antiguaVelocidad = 1f;
-    
-
+    public PlayerController playerController;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteOriginal = spriteRenderer.sprite;
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-        
+        playerController = GetComponent<PlayerController>();
     }
+
 
     void Update()
     {
@@ -44,7 +44,9 @@ public class TransformacionSprite : MonoBehaviour
         {
             antiguaVelocidad = GetComponent<PlayerController>().speed;
             GetComponent<PlayerController>().speed = nuevaVelocidadLobo;
+
         }
+    
 
         Vector2 colliderOriginalSize = capsuleCollider.size;
 
