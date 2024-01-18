@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     public GameObject Weapon;
     public float tiempoDeActivacion = 1f;
+    public AudioClip salto;
+    public AudioClip Golpe;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+            AudioSource.PlayClipAtPoint(Golpe, transform.position);
             anim.SetTrigger("Attack1");
 
         }
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Jump") && isGrounded)
         {
+            AudioSource.PlayClipAtPoint(salto, transform.position);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }    
 

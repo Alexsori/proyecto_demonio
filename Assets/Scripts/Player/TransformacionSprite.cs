@@ -13,6 +13,7 @@ public class TransformacionSprite : MonoBehaviour
     private bool enTransformacion = false;
     public float nuevaVelocidadLobo = 7f;
     public float antiguaVelocidad = 1f;
+    
 
 
     void Start()
