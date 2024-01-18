@@ -10,7 +10,7 @@ public class VidaEnemigo : MonoBehaviour
 {
     [SerializeField] private Healthbar healthbar;
     [SerializeField] private float maxHealth;
-    private float health;
+    private float healthPoints;
     public Image hpEnemigo;
 
     Enemigo enemy;
@@ -22,8 +22,8 @@ public class VidaEnemigo : MonoBehaviour
 
     private void Start()
     {
-        health = maxHealth;
-        healthbar.UpdateHealthbar(maxHealth, health);
+        healthPoints = maxHealth;
+        healthbar.UpdateHealthbar(maxHealth, healthPoints);
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         material = GetComponent<Blink>();
@@ -32,8 +32,7 @@ public class VidaEnemigo : MonoBehaviour
 
     private void Update()
     {
-        hpEnemigo.fillAmount = health / maxHealth;
-
+        hpEnemigo.fillAmount = healthPoints / maxHealth;
     }
 
 
@@ -43,8 +42,12 @@ public class VidaEnemigo : MonoBehaviour
         if (collision.CompareTag("Weapon") && !isDamaged)
         {
             // Reducir la salud del enemigo
-            enemy.healthPoints -= 2f;
-            healthbar.UpdateHealthbar(maxHealth, health);
+            healthPoints -= 2f;
+
+            //healthbar.UpdateHealthbar(maxHealth, healthPoints);
+
+
+
             // Aplicar efecto de golpe y knockback
             ApplyHitEffect(collision);
 
