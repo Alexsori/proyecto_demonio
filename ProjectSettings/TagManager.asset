@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemigo
   - Weapon
+  - Heart
   layers:
   - Default
   - TransparentFX
