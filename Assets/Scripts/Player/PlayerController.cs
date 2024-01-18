@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -56,23 +57,25 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && !isAttacking)
         {
-            StartCoroutine(AttackCoroutine());
+            isAttacking = true;
+            anim.SetTrigger("Attack1");
+
+            if (audioSource != null && Golpe != null)
+            {
+                audioSource.PlayOneShot(Golpe);
+            }
+
+            StartCoroutine(AttackCooldown());
         }
     }
 
-    IEnumerator AttackCoroutine()
+    IEnumerator AttackCooldown()
     {
-        isAttacking = true;
-
-        anim.SetTrigger("Attack1");
-
-        AudioSource.PlayClipAtPoint(Golpe, transform.position);
-
-
         yield return new WaitForSeconds(0.5f);
 
         isAttacking = false;
     }
+
 
 
     public void Jump()
@@ -130,10 +133,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void PlayAttackSound()
-    {
-        audioSource.PlayOneShot(Golpe);
-    }
 
     public void FinishAttack()
     {
