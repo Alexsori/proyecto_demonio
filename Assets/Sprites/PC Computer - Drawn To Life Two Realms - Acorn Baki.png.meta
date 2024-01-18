@@ -118,7 +118,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,6 +273,300 @@ TextureImporter:
       bones: []
       spriteID: 07fced0f4f3243347b2dd6f6cbe0704f
       internalID: -1707854117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 32
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c94f3c230352441bcb67a77abe1460
+      internalID: 321890874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eda005c8c9399d45824748841ae0b45
+      internalID: -457707388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 32
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae76bd5509988e4439ebf5cc7e36c0d1
+      internalID: -22128670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 32
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1223ab3722a51646a21addebd209d5b
+      internalID: 2053433281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 32
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16943fa22a788c640bc895b7c952d061
+      internalID: 1421530891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 32
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544daefcf93f68341b75564f4aba8118
+      internalID: 477278831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 32
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f22eb7c7bbda14fa610a033849ffc0
+      internalID: 525211357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_15
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 32
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6970761361f57db4491a94c343a211bf
+      internalID: -2140145288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33463e542a5db0146bb7df758f63207b
+      internalID: -651369181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_17
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32767b1f2c26b25499ba4397be3334d3
+      internalID: -340797677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_18
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a521fe76d50c65541a903683cf15c05e
+      internalID: -224171066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_19
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e432c3d7532d088469c12f55a2ced541
+      internalID: -786446185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_20
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f08937b2cd959241bd352dc73cfc074
+      internalID: -958481063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Drawn To Life Two Realms - Acorn Baki_21
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6075cc59c5a14548b3a59b21ff3cd87
+      internalID: -180439846
       vertices: []
       indices: 
       edges: []
@@ -290,12 +584,26 @@ TextureImporter:
     nameFileIdTable:
       PC Computer - Drawn To Life Two Realms - Acorn Baki_0: 260012578
       PC Computer - Drawn To Life Two Realms - Acorn Baki_1: -180725498
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_10: -22128670
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_11: 2053433281
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_12: 1421530891
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_13: 477278831
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_14: 525211357
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_15: -2140145288
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_16: -651369181
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_17: -340797677
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_18: -224171066
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_19: -786446185
       PC Computer - Drawn To Life Two Realms - Acorn Baki_2: 1389195481
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_20: -958481063
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_21: -180439846
       PC Computer - Drawn To Life Two Realms - Acorn Baki_3: -1294914555
       PC Computer - Drawn To Life Two Realms - Acorn Baki_4: -508190438
       PC Computer - Drawn To Life Two Realms - Acorn Baki_5: 284415613
       PC Computer - Drawn To Life Two Realms - Acorn Baki_6: -1357852198
       PC Computer - Drawn To Life Two Realms - Acorn Baki_7: -1707854117
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_8: 321890874
+      PC Computer - Drawn To Life Two Realms - Acorn Baki_9: -457707388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
