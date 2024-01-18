@@ -5,6 +5,7 @@ using static UnityEngine.GridBrushBase;
 
 public class MovEnemigos : MonoBehaviour
 {
+
     float speed;
     Rigidbody2D rb;
     Animator anim;

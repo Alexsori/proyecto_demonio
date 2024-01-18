@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class VidaEnemigo : MonoBehaviour
 {
+    [SerializeField] private Healthbar healthbar;
+
     Enemigo enemy;
     public bool isDamaged;
     public GameObject deathEffect;
