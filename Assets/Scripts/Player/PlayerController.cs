@@ -14,8 +14,10 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     public GameObject Weapon;
     public float tiempoDeActivacion = 1f;
-    public AudioClip salto;
+    public AudioSource audioSource;
     public AudioClip Golpe;
+    public AudioClip Salto;
+    private bool isAttacking = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            AudioSource.PlayClipAtPoint(Golpe, transform.position);
+            isAttacking = true;
             anim.SetTrigger("Attack1");
 
         }
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Jump") && isGrounded)
         {
-            AudioSource.PlayClipAtPoint(salto, transform.position);
+            audioSource.PlayOneShot(Salto);
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }    
 
@@ -106,6 +108,16 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-2.54779f, 2.402077f, 0);
         }
+    }
+
+    public void PlayAttackSound()
+    {
+        audioSource.PlayOneShot(Golpe);
+    }
+
+    public void FinishAttack()
+    {
+        isAttacking = false;
     }
 
 }
