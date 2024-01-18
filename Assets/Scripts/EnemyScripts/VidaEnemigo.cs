@@ -42,7 +42,7 @@ public class VidaEnemigo : MonoBehaviour
         if (collision.CompareTag("Weapon") && !isDamaged)
         {
             // Reducir la salud del enemigo
-            healthPoints -= 2f;
+            enemy.healthPoints -= 2f;
 
             //healthbar.UpdateHealthbar(maxHealth, healthPoints);
 
