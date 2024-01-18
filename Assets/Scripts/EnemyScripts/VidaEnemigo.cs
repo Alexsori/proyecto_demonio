@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VidaEnemigo : MonoBehaviour
 {
     [SerializeField] private Healthbar healthbar;
+    [SerializeField] private float maxHealth;
+    private float health;
+    public Image hpEnemigo;
 
     Enemigo enemy;
     public bool isDamaged;
@@ -17,11 +22,21 @@ public class VidaEnemigo : MonoBehaviour
 
     private void Start()
     {
+        health = maxHealth;
+        healthbar.UpdateHealthbar(maxHealth, health);
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         material = GetComponent<Blink>();
         enemy = GetComponent<Enemigo>();
     }
+
+    private void Update()
+    {
+        hpEnemigo.fillAmount = health / maxHealth;
+
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,7 +44,7 @@ public class VidaEnemigo : MonoBehaviour
         {
             // Reducir la salud del enemigo
             enemy.healthPoints -= 2f;
-
+            healthbar.UpdateHealthbar(maxHealth, health);
             // Aplicar efecto de golpe y knockback
             ApplyHitEffect(collision);
 

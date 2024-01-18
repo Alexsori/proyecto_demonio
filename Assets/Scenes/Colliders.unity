@@ -4469,18 +4469,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649353451}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.7804662}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -0.0025, y: 0.0025, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 617847837}
-  m_Father: {fileID: 8476030136240696589}
+  m_Father: {fileID: 1981332636}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.54, y: -0.04}
+  m_AnchoredPosition: {x: -0.07000011, y: 0.070000015}
   m_SizeDelta: {x: 927.6, y: 509.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649353453
@@ -5958,6 +5958,14 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 649353456}
+    - target: {fileID: 4669989185201943696, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
+      propertyPath: hpEnemigo
+      value: 
+      objectReference: {fileID: 614476282}
+    - target: {fileID: 4669989185201943696, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5064096373821390070, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
       propertyPath: m_Name
       value: Esqueleto (1)
@@ -5969,7 +5977,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1682291206419000641, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 846981958329200392, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
       insertIndex: -1
       addedObject: {fileID: 649353452}
     m_AddedComponents: []
@@ -14794,6 +14802,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.42, y: 2.39}
   m_EdgeRadius: 0
+--- !u!4 &1981332636 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 846981958329200392, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
+  m_PrefabInstance: {fileID: 840974286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1984826476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16176,11 +16189,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 388399692683236619, guid: ac0fc81834f8efb42bbf25a10dbec29d, type: 3}
   m_PrefabInstance: {fileID: 4212236883970598198}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8476030136240696589 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1682291206419000641, guid: d15c072b4e0306a4488d1c8d85c71c94, type: 3}
-  m_PrefabInstance: {fileID: 840974286}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8526485096232975957
 PrefabInstance:
