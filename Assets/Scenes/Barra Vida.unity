@@ -6593,8 +6593,9 @@ MonoBehaviour:
     m_Bits: 128
   Weapon: {fileID: 0}
   tiempoDeActivacion: 1
-  salto: {fileID: 0}
+  audioSource: {fileID: 0}
   Golpe: {fileID: 0}
+  Salto: {fileID: 0}
 --- !u!50 &929720657
 Rigidbody2D:
   serializedVersion: 4
@@ -7738,7 +7739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.07000011, y: 0.070000015}
+  m_AnchoredPosition: {x: 5.73, y: 0.070000015}
   m_SizeDelta: {x: 927.6, y: 509.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1031511882
