@@ -19,6 +19,12 @@ public class PlayerHealth : MonoBehaviour
     Animator anim;
     public TextMeshProUGUI mensajeTexto;
 
+
+    public void AumentarVida(int incremento)
+    {
+        health += incremento;
+       
+    }
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
