@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
     public GameObject FalseWall;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         FalseWall.SetActive(true);
@@ -16,15 +18,13 @@ public class DestroyWall : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);
-
             FalseWall.SetActive(false);
 
+            { }
+            }
         }
     }
 
-        // Update is called once per frame
-        void Update()
-        {
+    
+    
 
-        }
-    }

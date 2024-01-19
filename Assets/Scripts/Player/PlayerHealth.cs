@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static Corazon;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -53,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
             if (health <= 0)
             {
                 print("player dead");
-                //anim.SetTrigger("Death");
+                ReiniciarEscena();
             }
         }
         else if (collision.CompareTag("Heart"))
@@ -78,5 +80,14 @@ public class PlayerHealth : MonoBehaviour
         maxHealth += cantidad;
         health = maxHealth; // También puedes ajustar la salud actual si lo prefieres.
         Debug.Log("Vida máxima aumentada a: " + maxHealth);
+    }
+
+    private void ReiniciarEscena()
+    {
+        // Puedes ajustar el nombre de la escena según tu configuración
+        string nombreEscenaActual = SceneManager.GetActiveScene().name;
+
+        // Reinicia la escena actual
+        SceneManager.LoadScene(nombreEscenaActual);
     }
 }

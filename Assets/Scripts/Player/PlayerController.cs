@@ -19,11 +19,14 @@ public class PlayerController : MonoBehaviour
     public AudioClip Footsteps;
     public AudioClip salto;
     bool isAttacking = false;
+    public AudioSource audioSource2;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource2 = gameObject.AddComponent<AudioSource>();
+        audioSource2.playOnAwake = false;
     }
 
 
@@ -93,6 +96,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
     public void Movement()
     {
         velX = Input.GetAxisRaw("Horizontal");
@@ -104,19 +108,20 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Run", true);
 
-            if (audioSource != null && Footsteps != null && !audioSource.isPlaying)
+            if (audioSource2 != null && Footsteps != null && !audioSource2.isPlaying)
             {
-                audioSource.clip = Footsteps;
-                audioSource.Play();
+                audioSource2.clip = Footsteps;
+                audioSource2.Play();
             }
         }
         else
         {
             anim.SetBool("Run", false);
 
-            if (audioSource != null && Footsteps != null && audioSource.isPlaying)
+            // Detener el sonido solo si estaba reproduciéndose y no se está realizando otra acción (por ejemplo, pegar)
+            if (audioSource2 != null && Footsteps != null && audioSource2.isPlaying && !isAttacking)
             {
-                audioSource.Stop();
+                audioSource2.Stop();
             }
         }
     }
